@@ -48,9 +48,9 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5.5
       with:
         # Name of the Docker image
-        image: spring-boot-hello
+        image: lolspider/spring-boot-hello
         # Tags override for Docker image
-        tags: ${{ github.ref }}
+        tags: ${{ env.GITHUB_RUN_NUMBER	}}
         # Target Docker registry
         registry: docker.io
         # Docker registry username
