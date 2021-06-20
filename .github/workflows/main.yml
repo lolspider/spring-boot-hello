@@ -50,7 +50,7 @@ jobs:
         # Name of the Docker image
         image: lolspider/spring-boot-hello
         # Tags override for Docker image
-        tags: $GITHUB_RUN_NUMBER
+        tags: ${GITHUB_REF##*/}-$GITHUB_RUN_NUMBER
         # Target Docker registry
         registry: docker.io
         # Docker registry username
